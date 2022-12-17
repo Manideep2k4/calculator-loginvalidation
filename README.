@@ -1,0 +1,43 @@
+# login-validation
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Validation</title>
+</head>
+<body>
+    <p>
+        Email: mani@gmail.com
+        <br>
+        Password:mani
+    </p>
+    <form>
+        Email: <input type="text" id="email" required>
+        Password: <input type="password" id="pass" requird >
+        <button typ="button" id="btn">Login</button>
+    </form>
+
+    <script type="text/javascript">
+        var emailEntered = document.getElementById('email');
+        var passEntered = document.getElementById('pass');
+
+        var button = document.getElementById('btn');
+
+        button.addEventListener("click", function(){
+            var email = emailEntered.value;
+            var password = passEntered.value;
+
+            var correctEmail = "mani@gmail.com";
+            var correctPass = "mani";
+            if(email === correctEmail && password === correctPass){
+                window.open("calc app.html")
+        }
+        else{
+            alert("Invalid password or Email");
+        }
+    });
+
+    
+
+    </script>
+</body>
+</html>
